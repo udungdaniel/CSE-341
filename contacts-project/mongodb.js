@@ -9,7 +9,10 @@ const initDb = async () => {
       return database;
     }
 
-    const client = new MongoClient(process.env.MONGODB_URL);
+    const client = new MongoClient(process.env.MONGODB_URL, {
+      tls: true,
+      tlsAllowInvalidCertificates: false
+    });
 
     await client.connect();
 
@@ -19,7 +22,7 @@ const initDb = async () => {
 
     return database;
   } catch (err) {
-    console.error(err);
+    console.error('MongoDB Connection Error:', err);
     throw err;
   }
 };
