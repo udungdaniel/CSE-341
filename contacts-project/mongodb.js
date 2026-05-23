@@ -9,9 +9,7 @@ const initDb = async () => {
       return database;
     }
 
-    const client = new MongoClient(process.env.MONGODB_URL, {
-      tls: true
-    });
+    const client = new MongoClient(process.env.MONGODB_URL);
 
     await client.connect();
 
@@ -21,7 +19,7 @@ const initDb = async () => {
 
     return database;
   } catch (err) {
-    console.error('MongoDB Connection Error:', err);
+    console.error(err);
     throw err;
   }
 };
