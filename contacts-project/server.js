@@ -2,12 +2,12 @@ const express = require('express');
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use('/contacts', require('./routes/contacts'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World, welcome to CSE341');
+  res.send('Welcome to Contacts API');
 });
 
 app.listen(port, () => {
