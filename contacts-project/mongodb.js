@@ -9,7 +9,9 @@ const initDb = async () => {
       return database;
     }
 
-    const client = new MongoClient(process.env.MONGODB_URL);
+    const client = new MongoClient(process.env.MONGODB_URL, {
+      tls: true
+    });
 
     await client.connect();
 
