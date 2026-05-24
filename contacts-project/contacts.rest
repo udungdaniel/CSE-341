@@ -17,16 +17,16 @@ Content-Type: application/json
 }
 
 ### Update Contact
-PUT http://localhost:3000/contacts/6a09003657de57d4e6adab07
+PUT http://localhost:3000/contacts/6a133ead1a16c7f67c76dc3f
 Content-Type: application/json
 
 {
-  "firstName": "Updated",
-  "lastName": "Person",
-  "email": "updated@example.com",
-  "favoriteColor": "Purple",
-  "birthday": "2001-01-01"
+  "firstName": "Maryanne Updated",
+  "lastName": "Smith",
+  "email": "maryanneupdated@gmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "2000-02-14"
 }
 
 ### Delete Contact
-DELETE http://localhost:3000/contacts/6a09006b57de57d4e6adab09
+DELETE http://localhost:3000/contacts/6a133f331a16c7f67c76dc40
