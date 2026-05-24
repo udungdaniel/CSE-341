@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: 'https://cse340webservice-tmsa.onrender.com/'
+        url: 'https://cse340webservice-tmsa.onrender.com'
       }
     ]
   },
